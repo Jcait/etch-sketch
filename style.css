@@ -1,11 +1,20 @@
 div, .container{
-    height: 100px;
-    width: 100px;
+    height: 300px;
+    width: 300px;
     background-color: lightgray;
 }
 
 div {
-    height: 10px;
-    width: 10px;
+    height: 25%;
+    width: 25%;
     background-color: bisque;
+    border: solid black;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
 }
