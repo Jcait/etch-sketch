@@ -17,12 +17,12 @@ btn.innerText = 'Set your canvas here'
 
 
 btn.addEventListener('click', () => {
-    input = parseInt(prompt("est")) 
+    input = parseInt(prompt("Please set how many squares wide and tall you want the canvas")) 
     i = input * input
     tileCount = input * input
     if(!Number(i)) {
         alert("Please enter a number!")
-    } else if (i > 100) {
+    } else if (i < 100) {
     alert("Please enter a number equal or greater than 100")
     } else {    removeAllChildNodes(container)
     setCanvas()
@@ -37,11 +37,11 @@ function removeAllChildNodes(parent) {
     }
 }
 
-btn.addEventListener('click', () => {
-    console.log(i)
+// btn.addEventListener('click', () => {
+//     console.log(i)
 
-    // setCanvas()
-})
+//     // setCanvas()
+// })
 
 // gets the number we want to pass to the divs
 
