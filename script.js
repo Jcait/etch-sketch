@@ -3,7 +3,7 @@ const div = document.createElement('div')
 const p = document.createElement('p')
 const btn = document.createElement('button')
 const body = document.querySelector('body')
-let i = 0
+let i = 4
 let tileCount = 0
 let inner = document.querySelectorAll('.inner')
 
@@ -16,19 +16,25 @@ btn.innerText = 'Set your canvas here'
 
 btn.addEventListener('click', () => {
     input = parseInt(prompt("est")) 
-    tilecount = input ** input
-    i= tileCount   
+    i = input * input
+    tileCount = input * input
     setCanvas()
 } )
+
+btn.addEventListener('click', () => {
+    console.log(i)
+
+    // setCanvas()
+})
 
 // gets the number we want to pass to the divs
 
 let getHeight = () => {
- return `${container.offsetHeight / in}px` 
+ return `${container.offsetHeight / input}px` 
 }
 
 let getWidth = () => {
-    return `${container.offsetWidth / tileCount}px`  
+    return `${container.offsetWidth / input}px`  
 }
 // Loop to create the divs
 
@@ -36,7 +42,7 @@ let getWidth = () => {
 let setCanvas = () => { while (i >0) {
     console.log(i)
     let div = document.createElement('div')
-    div.style.height = "25%"
+    div.style.height = getHeight()
     div.style.width = getWidth()
     div.tabIndex = 0
     div.className = "inner"
@@ -48,8 +54,3 @@ let setCanvas = () => { while (i >0) {
  }
 }
 
-// inner.forEach((div) => {
-//     div.addEventListener('click', () =>{ 
-//     console.log('boop')
-//     })
-// })
