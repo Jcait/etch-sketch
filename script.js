@@ -6,7 +6,7 @@ const body = document.querySelector('body')
 let i = 16
 let input = 4
 let tileCount = 0
-let inner = document.querySelectorAll('.inner')
+let inner = container.childNodes
 
 
 body.insertBefore(btn, container)
@@ -23,11 +23,12 @@ btn.addEventListener('click', () => {
     if(!Number(input)) {
         alert("Please enter a number!")
     } else if (input > 64) {
-    alert("Please enter a number equal or higher than  64")
+    alert("Please enter a number equal or higher than 64")
     } else {    removeAllChildNodes(container)
     setCanvas()
     
 }
+
 
 } )
 
@@ -61,15 +62,35 @@ let setCanvas = () => { while (i >0) {
     div.style.height = getHeight()
     div.style.width = getWidth()
     div.tabIndex = 0
-    div.className = "inner"
+    // div.className = "inner"         
     div.addEventListener('mouseover', () => {
         div.style.backgroundColor = 'black'
     })
+
     container.append(div)
     i--
- }
+ } 
 }
 
+document.addEventListener('keydown', (e) => {
+    console.log(e.key)
+    if (e.key === 'Shift') {
+        inner.forEach(div => {
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = "bisque"
+        })
+        })
+    }
+})
+
+document.addEventListener('keyup', (e) => {
+    console.log(e.key)
+        inner.forEach(div => {
+        div.addEventListener('mouseover', () => {
+            div.style.backgroundColor = "black"
+        })
+        })
+})
 
 document.addEventListener('DOMContentLoaded', () => {
     setCanvas()
