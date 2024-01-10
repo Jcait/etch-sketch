@@ -22,7 +22,7 @@ btn.addEventListener('click', () => {
     tileCount = input * input
     if(!Number(i)) {
         alert("Please enter a number!")
-    } else if (i < 100) {
+    } else if (i > 100) {
     alert("Please enter a number equal or greater than 100")
     } else {    removeAllChildNodes(container)
     setCanvas()
@@ -54,13 +54,6 @@ let getWidth = () => {
 }
 // Loop to create the divs
 
-if(!Number(i)) {
-        alert("Please enter a number!")
-} else if (i > 100) {
-    alert("Please enter a number equal or greater than 100")
-} else {
-    
-}
 
 let setCanvas = () => { while (i >0) {
     console.log(i)
