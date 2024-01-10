@@ -22,8 +22,8 @@ btn.addEventListener('click', () => {
     tileCount = input * input
     if(!Number(input)) {
         alert("Please enter a number!")
-    } else if (input > 100) {
-    alert("Please enter a number equal or less than 100")
+    } else if (input > 64) {
+    alert("Please enter a number equal or 64")
     } else {    removeAllChildNodes(container)
     setCanvas()
     
