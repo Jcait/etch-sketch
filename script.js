@@ -3,9 +3,11 @@ const div = document.createElement('div')
 const p = document.createElement('p')
 const btn = document.createElement('button')
 const body = document.querySelector('body')
-let i = 4
+let i = 16
+let input = 4
 let tileCount = 0
 let inner = document.querySelectorAll('.inner')
+
 
 body.insertBefore(btn, container)
 
@@ -54,3 +56,6 @@ let setCanvas = () => { while (i >0) {
  }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    setCanvas()
+})
