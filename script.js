@@ -23,7 +23,7 @@ btn.addEventListener('click', () => {
     if(!Number(input)) {
         alert("Please enter a number!")
     } else if (input > 64) {
-    alert("Please enter a number equal or 64")
+    alert("Please enter a number equal or higher than  64")
     } else {    removeAllChildNodes(container)
     setCanvas()
     
