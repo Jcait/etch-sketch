@@ -20,10 +20,10 @@ btn.addEventListener('click', () => {
     input = parseInt(prompt("Please set how many squares wide and tall you want the canvas")) 
     i = input * input
     tileCount = input * input
-    if(!Number(i)) {
+    if(!Number(input)) {
         alert("Please enter a number!")
-    } else if (i > 100) {
-    alert("Please enter a number equal or greater than 100")
+    } else if (input > 100) {
+    alert("Please enter a number equal or less than 100")
     } else {    removeAllChildNodes(container)
     setCanvas()
     
