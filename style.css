@@ -9,6 +9,11 @@ div {
     width: 25%;
     background-color: bisque;
     border: solid black;
+    box-sizing: border-box;
+}
+
+.inner:hover {
+    background-color: black;
 }
 
 .container {
