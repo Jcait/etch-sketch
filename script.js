@@ -20,8 +20,22 @@ btn.addEventListener('click', () => {
     input = parseInt(prompt("est")) 
     i = input * input
     tileCount = input * input
+    if(!Number(i)) {
+        alert("Please enter a number!")
+    } else if (i > 100) {
+    alert("Please enter a number equal or greater than 100")
+    } else {    removeAllChildNodes(container)
     setCanvas()
+    
+}
+
 } )
+
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 btn.addEventListener('click', () => {
     console.log(i)
@@ -40,6 +54,13 @@ let getWidth = () => {
 }
 // Loop to create the divs
 
+if(!Number(i)) {
+        alert("Please enter a number!")
+} else if (i > 100) {
+    alert("Please enter a number equal or greater than 100")
+} else {
+    
+}
 
 let setCanvas = () => { while (i >0) {
     console.log(i)
@@ -55,6 +76,7 @@ let setCanvas = () => { while (i >0) {
     i--
  }
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     setCanvas()
