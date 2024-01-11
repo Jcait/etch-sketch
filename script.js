@@ -19,11 +19,11 @@ btn.innerText = 'Set your canvas here'
 btn.addEventListener('click', () => {
     input = parseInt(prompt("Please set how many squares wide and tall you want the canvas")) 
     i = input * input
-    tileCount = input * input
+    tileCount = i
     if(!Number(input)) {
         alert("Please enter a number!")
     } else if (input > 64) {
-    alert("Please enter a number equal or higher than 64")
+    alert("Please enter a number equal or lower than 64")
     } else {    removeAllChildNodes(container)
     setCanvas()
     
@@ -66,11 +66,12 @@ let setCanvas = () => { while (i >0) {
     div.addEventListener('mouseover', () => {
         div.style.backgroundColor = 'black'
     })
-
     container.append(div)
     i--
  } 
 }
+
+// Checks if the shift key is held when moving
 
 document.addEventListener('keydown', (e) => {
     console.log(e.key)
